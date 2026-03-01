@@ -1,0 +1,19 @@
+services:
+  api:
+    build:
+      context: ./api
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./perak_flights.db:/app/perak_flights.db
+    environment:
+      - AVIATIONSTACK_KEY=${AVIATIONSTACK_KEY}
+    depends_on:
+      - collector
+
+  collector:
+    build:
+      context: ./collector
+    volumes:
+      - ./perak_flights.db:/app/perak_flights.db
+
