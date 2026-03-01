@@ -81,5 +81,7 @@ while True:
     except Exception as e:
         print("OpenSky Error:", e)
 
-    print(" Waiting 10 seconds...\n")
-    time.sleep(10)
+    print(" Waiting...\n")
+    time.sleep(600)
+
+    
