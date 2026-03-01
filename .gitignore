@@ -1,4 +1,8 @@
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
 venv/
 .env
+perak_flights.db
+*.db
