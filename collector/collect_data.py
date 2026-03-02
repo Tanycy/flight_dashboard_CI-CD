@@ -28,8 +28,8 @@ while True:
         response = r.json()
 
         if response.get("states") is None:
-            print("⚠ No data from OpenSky")
-            time.sleep(10)
+            print("No data from OpenSky")
+            time.sleep(300)
             continue
 
         print("Flights received:", len(response["states"]))
@@ -53,8 +53,8 @@ while True:
         flight_df = flight_df.dropna(subset=["latitude", "longitude"])
 
         if flight_df.empty:
-            print("⚠ No valid coordinates found")
-            time.sleep(10)
+            print("No valid coordinates found")
+            time.sleep(300)
             continue
 
         print(f" Sending {len(flight_df)} records...")
@@ -81,5 +81,5 @@ while True:
     except Exception as e:
         print("OpenSky Error:", e)
 
-    print(" Waiting 10 seconds...\n")
+    print(" Waiting...\n")
     time.sleep(300)
