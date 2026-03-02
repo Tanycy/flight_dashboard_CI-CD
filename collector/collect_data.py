@@ -82,4 +82,4 @@ while True:
         print("OpenSky Error:", e)
 
     print(" Waiting 10 seconds...\n")
-    time.sleep(10)
+    time.sleep(300)
